@@ -1,5 +1,5 @@
 <template>
-    <div class="login">
+    <div class="login contanier">
         <p style="padding-top: 30px;"><img src="../assets/family.svg" alt=""></p>
         <p style=" font-size:18px; color: #fff;text-align: center;padding-top: 30px;padding-bottom: 60px;">请输入解锁密码</p>
         <p><span class="input-label">{{verifyNum[0]}}</span> <span class="input-label">{{verifyNum[1]}}</span> <span
@@ -47,10 +47,11 @@
 			},
 			startVerify () {//验证数据
 				if (this.verifyNum.toString () === '1,3,5,9') {
-					alert ('验证通过！')
+					this.$toast.success({message:'验证成功！',time:1000});
+					setTimeout(()=>{this.$router.push('/home')},1000)
 				} else {
 					this.verifyNum = [];
-					alert ('验证失败');
+					this.$toast.error('验证失败！');
 				}
 			}
 		}
@@ -77,10 +78,7 @@
         color: #42b983;
     }
     
-    .login {
-        width: 100%;
-        height: 100%;
-    }
+
     
     .login {
         background-color: #2dbe5f;
@@ -93,7 +91,7 @@
         margin-left: 2%;
         height: 20px;
         color: #fff;
-        font-size: 20;
+        font-size: 20px;
         margin-right: 2%;
     }
     
