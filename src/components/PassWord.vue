@@ -16,7 +16,7 @@
             <li class="label-number" @click="handleNumber(9)">9</li>
             <li class="label-number label-number-txt">取消</li>
             <li class="label-number" @click="handleNumber(0)">0</li>
-            <li class="label-number label-number-txt" @click="handleNumber(-1)">清除</li>
+            <li class="label-number label-number-txt" @click="handleNumber(-1)"><mu-icon value="backspace"></mu-icon></li>
         
         </ul>
     </div>
@@ -105,6 +105,6 @@
     }
     
     .label-number-txt {
-        font-size: 28px;
+        font-size: 24px;
     }
 </style>
