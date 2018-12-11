@@ -8,7 +8,9 @@ import 'muse-ui/dist/muse-ui.css';
 import Toast from 'muse-ui-toast';
 import App from './App'
 import publicFunction from './publicFunction'
+import echarts from 'echarts'
 
+Vue.prototype.$echarts = echarts
 
 Vue.use(MuseUI);
 Vue.use(Toast);

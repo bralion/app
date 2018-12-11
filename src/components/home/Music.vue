@@ -1,6 +1,6 @@
 <template>
     <div>
-        音乐
+        聊天
     </div>
 </template>
 
